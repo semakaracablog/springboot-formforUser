@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<head>
+	<meta charset="ISO-8859-1">
+	<!-- Link to external CSS file using Thymeleaf -->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+ </head>
+ 
+</head>
+
+</head>
+<body>
+<div class="wrapper">
+	<h1>Welcome,dear user.</h1>
+	<form th:action="register" th:method="post" th:object="${userForm}">
+	<div class="input-box">
+	<label for="firstName">First Name</label>
+	<input type="text" th:field="*{firstName}">
+	</div>
+	<div class="input-box">
+	<label for="lastName">Last Name</label>
+	<input type="text" th:field="*{lastName}">
+	</div>
+
+	<div class="input-box">
+	<label for="email">Email</label>
+	<input type="email" th:field="*{email}">
+	</div>
+
+	<div class="input-box">
+	<label for="password">Password</label>
+	<input type="password" th:field="*{passwd}">
+	</div>
+	<div class="input-box">
+	<label for="dob">Birth Date</label>
+	<input type="date" th:field="*{dob}">
+	</div>
+	<button type="submit">Submit</button>
+	</form>
+</div>
+
+</body>
+</html>
